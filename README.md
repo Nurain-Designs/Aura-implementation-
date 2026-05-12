@@ -4,9 +4,11 @@ A premium, high-performance architectural UI design system built with React, Vit
 
 ## 🚀 Local Development
 
-To run the project locally, click the link below:
+To run the project locally and see your changes in real-time, click the link below:
 
-### [👉 Launch Local Server](http://localhost:5173)
+### 🔗 [👉 Launch Local Server (http://localhost:5173)](http://localhost:5173)
+
+*Note: Make sure your terminal is running `npm run dev` for this link to work.*
 
 ---
 
