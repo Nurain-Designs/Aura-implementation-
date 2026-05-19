@@ -50,7 +50,7 @@ function NeuralVisual() {
           </g>
         ))}
         {/* Traveling pulse */}
-        <circle r="0.8" fill="#d9b84d">
+        <circle r="0.8" fill="#ffffff">
           <animateMotion dur="6s" repeatCount="indefinite" path="M20,30 L50,18 L80,28 L75,58 L55,82 L25,80 L15,55 L20,30" />
         </circle>
       </svg>
@@ -59,13 +59,13 @@ function NeuralVisual() {
       <div className="absolute inset-0 scanline" />
 
       {/* HUD strips */}
-      <div className="absolute top-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white/35">
+      <div className="absolute top-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white">
         <span>NEURAL · STREAM</span>
         <span>00:24:18</span>
       </div>
-      <div className="absolute bottom-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white/35">
+      <div className="absolute bottom-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white">
         <span>9 NODES ACTIVE</span>
-        <span className="text-aura-gold">● SYNC</span>
+        <span className="text-white">● SYNC</span>
       </div>
     </div>
   );
@@ -85,7 +85,7 @@ function EncryptionVisual() {
         {[...Array(14)].map((_, i) => (
           <div
             key={i}
-            className="font-mono text-[10px] text-white/40 leading-tight whitespace-pre"
+            className="font-mono text-[10px] text-white leading-tight whitespace-pre"
             style={{
               animation: `fall ${6 + (i % 5)}s linear infinite`,
               animationDelay: `${i * 0.4}s`,
@@ -134,7 +134,7 @@ function EncryptionVisual() {
         background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.45) 100%)"
       }} />
 
-      <div className="absolute top-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white/35">
+      <div className="absolute top-3 left-3 right-3 flex justify-between text-[9px] uppercase tracking-[0.22em] text-white">
         <span>AES-512 · QKD</span>
         <span>SECURE</span>
       </div>
@@ -144,7 +144,7 @@ function EncryptionVisual() {
 
 export default function Systems() {
   return (
-    <section id="systems" className="relative py-32 px-6">
+    <section id="systems" className="relative py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -156,7 +156,7 @@ export default function Systems() {
           <h2 className="font-display font-semibold text-4xl md:text-6xl tracking-[-0.03em] leading-[1]">
             Systems of Elegance
           </h2>
-          <p className="mt-5 text-[14.5px] text-white/55 leading-relaxed max-w-md mx-auto">
+          <p className="mt-5 text-[14.5px] text-white leading-relaxed max-w-md mx-auto">
             Our capabilities span across dimensions, providing unparalleled
             control and aesthetic superiority.
           </p>
@@ -175,15 +175,15 @@ export default function Systems() {
             <div className="absolute inset-0 ring-1 ring-inset ring-white/0 group-hover:ring-white/20 transition-all duration-500" />
           </div>
           <div className="md:pl-6">
-            <div className="text-[11px] font-display font-medium tracking-[0.3em] text-white/30 mb-4">01</div>
+            <div className="text-[11px] font-display font-medium tracking-[0.3em] text-white mb-4">01</div>
             <h3 className="font-display font-semibold text-3xl md:text-5xl tracking-[-0.02em] leading-[1.05]">
               Neural Interface
             </h3>
-            <p className="mt-5 text-[14.5px] text-white/55 leading-relaxed max-w-sm">
+            <p className="mt-5 text-[14.5px] text-white leading-relaxed max-w-sm">
               Direct cognitive bridge to your data systems. Minimal latency,
               maximum intuition. Every signal becomes thought.
             </p>
-            <button className="mt-7 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-white/80 hover:text-aura-gold transition-colors group/b">
+            <button className="mt-7 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-white hover:text-white transition-colors group/b">
               Initialize System
               <span className="w-8 h-px bg-white/40 group-hover/b:bg-aura-gold group-hover/b:w-12 transition-all" />
             </button>
@@ -199,16 +199,16 @@ export default function Systems() {
           className="grid md:grid-cols-[1fr_1.15fr] gap-10 items-center"
         >
           <div className="md:order-1 order-2 md:pr-6">
-            <div className="text-[11px] font-display font-medium tracking-[0.3em] text-white/30 mb-4">02</div>
+            <div className="text-[11px] font-display font-medium tracking-[0.3em] text-white mb-4">02</div>
             <h3 className="font-display font-semibold text-3xl md:text-5xl tracking-[-0.02em] leading-[1.05]">
               Quantum
               <br />Encryption
             </h3>
-            <p className="mt-5 text-[14.5px] text-white/55 leading-relaxed max-w-sm">
+            <p className="mt-5 text-[14.5px] text-white leading-relaxed max-w-sm">
               Impenetrable security woven into the very fabric of your digital
               architecture. Mathematically untouchable.
             </p>
-            <button className="mt-7 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-white/80 hover:text-aura-gold transition-colors group/b">
+            <button className="mt-7 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-white hover:text-white transition-colors group/b">
               Initialize System
               <span className="w-8 h-px bg-white/40 group-hover/b:bg-aura-gold group-hover/b:w-12 transition-all" />
             </button>

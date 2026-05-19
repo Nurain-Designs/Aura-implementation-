@@ -38,9 +38,9 @@ function Bars() {
 
 export default function Metrics() {
   return (
-    <section id="telemetry" className="relative py-32 px-6">
+    <section id="telemetry" className="relative py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-center gap-3 mb-6 text-[10.5px] uppercase tracking-[0.28em] text-white/40">
+        <div className="flex items-center gap-3 mb-6 text-[10.5px] uppercase tracking-[0.28em] text-white">
           <span className="relative flex w-2 h-2">
             <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-50 animate-ping" />
             <span className="relative inline-flex w-2 h-2 rounded-full bg-emerald-400" />
@@ -53,11 +53,11 @@ export default function Metrics() {
             <h2 className="font-display font-semibold text-5xl md:text-7xl tracking-[-0.03em] leading-[0.92]">
               Performance at
               <br />
-              <span className="bg-gradient-to-r from-aura-gold to-white/60 bg-clip-text text-transparent">
+              <span className="text-white">
                 Absolute Scale.
               </span>
             </h2>
-            <p className="mt-6 text-[14.5px] text-white/55 leading-relaxed max-w-md">
+            <p className="mt-6 text-[14.5px] text-white leading-relaxed max-w-md">
               Our infrastructure processes millions of transactions with
               sub-millisecond precision. Architected for enterprises where
               failure is mathematically impossible.
@@ -75,7 +75,7 @@ export default function Metrics() {
             >
               <div className="absolute -right-10 -top-10 w-40 h-40 bg-aura-gold/10 rounded-full blur-3xl" />
               <div className="flex items-center justify-between mb-4">
-                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white/45">
+                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white">
                   ◇ System Uptime
                 </div>
                 <Bars />
@@ -84,9 +84,9 @@ export default function Metrics() {
                 <span className="font-display font-semibold text-6xl md:text-7xl tracking-[-0.04em]">
                   <CountUp to={99.999} decimals={3} duration={2.4} />
                 </span>
-                <span className="font-display font-semibold text-5xl md:text-6xl tracking-[-0.04em] text-white/30">%</span>
+                <span className="font-display font-semibold text-5xl md:text-6xl tracking-[-0.04em] text-white">%</span>
               </div>
-              <div className="mt-3 text-[12px] text-white/40">
+              <div className="mt-3 text-[12px] text-white">
                 Continuous operation across 47 global regions · Last incident: 412 days ago
               </div>
             </motion.div>
@@ -99,7 +99,7 @@ export default function Metrics() {
               className="glass rounded-2xl p-6"
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white/45">
+                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white">
                   ◇ Global Latency
                 </div>
                 <span className="text-[10px] text-emerald-400">▲ 0.3</span>
@@ -107,7 +107,7 @@ export default function Metrics() {
               <div className="font-display font-semibold text-4xl tracking-[-0.03em]">
                 &lt;<CountUp to={1.2} decimals={1} />ms
               </div>
-              <div className="mt-2 text-[11.5px] text-white/40">Edge to origin response time</div>
+              <div className="mt-2 text-[11.5px] text-white">Edge to origin response time</div>
               {/* Sparkline */}
               <svg viewBox="0 0 100 30" className="w-full h-8 mt-3">
                 <path d="M0,20 L10,15 L20,18 L30,10 L40,14 L50,8 L60,12 L70,5 L80,9 L90,4 L100,7"
@@ -131,7 +131,7 @@ export default function Metrics() {
               className="glass rounded-2xl p-6"
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white/45">
+                <div className="text-[10.5px] uppercase tracking-[0.25em] text-white">
                   ◇ Active Nodes
                 </div>
                 <span className="relative flex w-1.5 h-1.5">
@@ -142,7 +142,7 @@ export default function Metrics() {
               <div className="font-display font-semibold text-4xl tracking-[-0.03em]">
                 <CountUp to={14205} duration={2.4} />
               </div>
-              <div className="mt-2 text-[11.5px] text-white/40">Distributed globally in real-time</div>
+              <div className="mt-2 text-[11.5px] text-white">Distributed globally in real-time</div>
               {/* Mini grid */}
               <div className="mt-3 grid grid-cols-12 gap-0.5">
                 {[...Array(36)].map((_, i) => (

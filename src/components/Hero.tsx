@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 function Cube({ size = 220 }: { size?: number }) {
   const half = size / 2;
@@ -40,7 +41,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" ref={sectionRef} className="relative min-h-screen pt-32 pb-12 px-6 overflow-hidden">
+    <section id="home" ref={sectionRef} className="relative min-h-screen pt-32 pb-0 px-6 overflow-hidden">
       {/* Radial spotlight */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -56,20 +57,7 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl pointer-events-none" />
 
       <div className="relative max-w-[1400px] mx-auto">
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center mb-8"
-        >
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5">
-            <span className="w-1 h-1 rounded-full bg-aura-gold animate-pulse" />
-            <span className="text-[10.5px] uppercase tracking-[0.25em] text-white/70">
-              Enterprise Security · v4.2
-            </span>
-          </div>
-        </motion.div>
+
 
         {/* Heading */}
         <div className="text-center max-w-5xl mx-auto">
@@ -90,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="mt-8 text-[15px] md:text-[16px] text-white/55 max-w-xl mx-auto leading-relaxed"
+            className="mt-8 text-[15px] md:text-[16px] text-white max-w-xl mx-auto leading-relaxed"
           >
             A masterclass in minimal luxury. Focus on what truly matters with our
             pristine, distraction-free interface — engineered for those who refuse compromise.
@@ -100,20 +88,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="mt-10 flex items-center justify-center gap-3"
+            className="mt-10 flex items-center justify-center gap-4"
           >
-            <button className="group relative px-6 py-3 bg-white text-black rounded-full text-[13.5px] font-medium overflow-hidden transition-all hover:scale-[1.03]">
-              <span className="relative z-10">Request Demo</span>
-              <span className="absolute inset-0 bg-aura-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-            </button>
-            <button className="group relative px-6 py-3 bg-aura-gold text-black rounded-full text-[13.5px] font-medium overflow-hidden transition-all hover:scale-[1.03]">
-              <span className="relative z-10 flex items-center gap-2">
-                Read Manifesto
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M3 7h8m0 0L7 3m4 4L7 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </button>
+            <Link 
+              to="/contact"
+              className="px-7 py-3.5 bg-[#e2eff5] text-[#0f172a] rounded-[8px] text-[14.5px] font-medium hover:opacity-90 hover:scale-[1.02] transition-all"
+            >
+              Request Demo
+            </Link>
+            <Link 
+              to="/manifesto"
+              className="px-7 py-3.5 bg-[#c2a74c] text-[#0f172a] rounded-[8px] text-[14.5px] font-medium hover:opacity-90 hover:scale-[1.02] transition-all"
+            >
+              Read Manifesto
+            </Link>
           </motion.div>
         </div>
 
@@ -180,7 +168,7 @@ export default function Hero() {
           </div>
 
           {/* Top-right HUD */}
-          <div className="absolute top-5 right-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white/40">
+          <div className="absolute top-5 right-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white">
             <span className="w-1 h-1 rounded-full bg-aura-gold" />
             Live · Node 014
           </div>
@@ -193,7 +181,7 @@ export default function Hero() {
 function StatChip({ label, value }: { label: string; value: string }) {
   return (
     <div className="glass rounded-lg px-3.5 py-2.5 min-w-[110px]">
-      <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/45">{label}</div>
+      <div className="text-[9.5px] uppercase tracking-[0.22em] text-white">{label}</div>
       <div className="font-display font-semibold text-lg mt-0.5">{value}</div>
     </div>
   );

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Architecture() {
   return (
-    <section id="architecture" className="relative py-32 px-6">
+    <section id="architecture" className="relative py-24 px-6">
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
         {/* Visual */}
         <motion.div
@@ -41,7 +41,7 @@ export default function Architecture() {
                 <path d="M12 5a6 6 0 0 1 6 6v3" />
               </svg>
             </div>
-            <div className="text-[9.5px] uppercase tracking-[0.22em] text-white/45 mb-0.5">
+            <div className="text-[9.5px] uppercase tracking-[0.22em] text-white mb-0.5">
               Identity
             </div>
             <div className="font-display font-semibold text-[15px] tracking-tight">Cryptographic</div>
@@ -59,7 +59,7 @@ export default function Architecture() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-[11px] uppercase tracking-[0.32em] mb-8"
-            style={{ color: "#bdb6a6" }}
+            style={{ color: "#ffffff" }}
           >
             The Architecture
           </motion.div>
@@ -72,7 +72,7 @@ export default function Architecture() {
             className="font-display font-bold tracking-[-0.04em] leading-[0.98]"
             style={{
               fontSize: "clamp(56px, 7.5vw, 110px)",
-              color: "#d8d2c2",
+              color: "#ffffff",
             }}
           >
             Crafting the
@@ -86,7 +86,7 @@ export default function Architecture() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-10 text-[16px] md:text-[17px] leading-[1.6] max-w-lg"
-            style={{ color: "#a8a394" }}
+            style={{ color: "#ffffff" }}
           >
             We build digital infrastructure that operates silently, flawlessly,
             and beautifully. Every interaction is designed to feel inevitable,
@@ -130,7 +130,7 @@ export default function Architecture() {
               >
                 <div
                   className="mb-7 transition-all duration-500"
-                  style={{ color: "#bdb6a6" }}
+                  style={{ color: "#ffffff" }}
                 >
                   <span className="inline-block group-hover:scale-110 group-hover:text-white transition-all duration-500 origin-left">
                     {c.icon}
@@ -138,20 +138,20 @@ export default function Architecture() {
                 </div>
                 <h3
                   className="font-display font-bold text-[24px] md:text-[26px] tracking-[-0.01em] transition-colors duration-500 group-hover:text-white"
-                  style={{ color: "#bdb6a6" }}
+                  style={{ color: "#ffffff" }}
                 >
                   {c.title}
                 </h3>
                 <p
-                  className="mt-3 text-[14px] leading-[1.65] max-w-[260px] transition-colors duration-500 group-hover:text-white/70"
-                  style={{ color: "#8a8678" }}
+                  className="mt-3 text-[14px] leading-[1.65] max-w-[260px] transition-colors duration-500 group-hover:text-white"
+                  style={{ color: "#ffffff" }}
                 >
                   {c.desc}
                 </p>
                 {/* Animated underline */}
                 <div
                   className="mt-5 h-px w-10 transition-all duration-500 group-hover:w-24"
-                  style={{ background: "linear-gradient(90deg, #d8d2c2, transparent)" }}
+                  style={{ background: "linear-gradient(90deg, #ffffff, transparent)" }}
                 />
               </motion.a>
             ))}

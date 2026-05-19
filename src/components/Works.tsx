@@ -19,9 +19,9 @@ const works = [
 
 export default function Works() {
   return (
-    <section id="works" className="relative py-32 px-6">
+    <section id="works" className="relative py-24 px-6">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-center gap-3 mb-4 text-[10.5px] uppercase tracking-[0.28em] text-white/40">
+        <div className="flex items-center gap-3 mb-4 text-[10.5px] uppercase tracking-[0.28em] text-white">
           <span className="w-2 h-2 border border-white/40" />
           Spatial Gallery
         </div>
@@ -30,9 +30,18 @@ export default function Works() {
           <h2 className="font-display font-semibold text-5xl md:text-7xl tracking-[-0.03em] leading-[0.95]">
             Selected Works
           </h2>
-          <p className="text-[13.5px] text-white/45 max-w-xs">
-            A glimpse into systems engineered for those who refuse compromise.
-          </p>
+          <div className="flex items-center gap-4">
+            <button className="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all group">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="group-hover:-translate-x-1 transition-transform">
+                <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button className="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all group">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="group-hover:translate-x-1 transition-transform">
+                <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -70,14 +79,14 @@ export default function Works() {
               {/* Tag pill (top-left) */}
               <div className="absolute top-6 left-6">
                 <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/12 bg-black/35 backdrop-blur-md">
-                  <span className="text-[11px] tracking-[0.28em] text-white/85 font-medium">
+                  <span className="text-[11px] tracking-[0.28em] text-white font-medium">
                     {w.tag}
                   </span>
                 </div>
               </div>
 
               {/* Number (top-right) */}
-              <div className="absolute top-6 right-7 font-display font-medium text-[18px] text-white/55 tabular-nums">
+              <div className="absolute top-6 right-7 font-display font-medium text-[18px] text-white tabular-nums">
                 {w.no}
               </div>
 
@@ -87,9 +96,9 @@ export default function Works() {
                   <div className="font-display font-semibold text-[22px] tracking-[-0.01em] text-white">
                     {w.title}
                   </div>
-                  <div className="text-[12px] text-white/55 mt-1">{w.desc}</div>
+                  <div className="text-[12px] text-white mt-1">{w.desc}</div>
                 </div>
-                <div className="w-11 h-11 rounded-full bg-white text-black flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.25)]">
+                <div className="w-11 h-11 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.25)]">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -102,7 +111,7 @@ export default function Works() {
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
                 style={{
                   boxShadow:
-                    "inset 0 0 80px rgba(255,255,255,0.06), 0 30px 80px rgba(217,184,77,0.08)",
+                    "inset 0 0 80px rgba(255,255,255,0.06), 0 30px 80px rgba(255, 255, 255, 0.08)",
                 }}
               />
 

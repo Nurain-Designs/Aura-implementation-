@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Architecture from "./components/Architecture";
@@ -10,6 +11,23 @@ import Metrics from "./components/Metrics";
 import Testimonial from "./components/Testimonial";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+
+// Pages
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Portfolio from "./pages/Portfolio";
+import Login from "./pages/Login";
+import GetAccess from "./pages/GetAccess";
+
+import ArchitecturePage from "./pages/Architecture";
+import SecurityProtocol from "./pages/SecurityProtocol";
+import NeuralNetwork from "./pages/NeuralNetwork";
+import GlobalNodes from "./pages/GlobalNodes";
+import Manifesto from "./pages/Manifesto";
+import Careers from "./pages/Careers";
+import Press from "./pages/Press";
+import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 
 function CursorGlow() {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,31 +54,12 @@ function ScrollProgress() {
   return (
     <motion.div
       style={{ scaleX: w, transformOrigin: "0% 0%" }}
-      className="fixed top-0 left-0 right-0 h-px z-[60] bg-gradient-to-r from-aura-gold via-white to-aura-gold"
+      className="fixed top-0 left-0 right-0 h-px z-[60] bg-gradient-to-r from-white via-white/50 to-white"
     />
   );
 }
 
-function Marquee() {
-  const items = [
-    "ENTERPRISE GRADE", "QUANTUM ENCRYPTED", "ZERO LATENCY", "NEURAL ARCHITECTURE",
-    "PRECISION ENGINEERED", "SOVEREIGN DEPLOYMENT", "SUB-MILLISECOND", "GLOBAL MESH",
-  ];
-  return (
-    <div className="relative py-6 border-y border-white/5 overflow-hidden">
-      <div className="flex marquee-track w-max">
-        {[...items, ...items, ...items, ...items].map((t, i) => (
-          <div key={i} className="flex items-center gap-12 px-6">
-            <span className="font-display text-[13px] uppercase tracking-[0.3em] text-white/30 whitespace-nowrap">{t}</span>
-            <span className="text-aura-gold/40 text-xs">◆</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default function App() {
+function HomePage() {
   return (
     <div
       className="relative min-h-screen text-white overflow-x-clip"
@@ -76,7 +75,6 @@ export default function App() {
 
       <main>
         <Hero />
-        <Marquee />
         <Architecture />
         <Systems />
         <Works />
@@ -88,5 +86,29 @@ export default function App() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/get-access" element={<GetAccess />} />
+        <Route path="/architecture" element={<ArchitecturePage />} />
+        <Route path="/security-protocol" element={<SecurityProtocol />} />
+        <Route path="/neural-network" element={<NeuralNetwork />} />
+        <Route path="/global-nodes" element={<GlobalNodes />} />
+        <Route path="/manifesto" element={<Manifesto />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -46,7 +46,7 @@ const steps = [
 
 export default function Methodology() {
   return (
-    <section id="methodology" className="relative py-32 px-6 overflow-hidden">
+    <section id="methodology" className="relative py-24 px-6 overflow-hidden">
       {/* Architectural background */}
       <div className="absolute inset-0">
         <img
@@ -81,7 +81,7 @@ export default function Methodology() {
           className="flex items-center gap-3 mb-6"
         >
           <span className="w-7 h-px bg-white/40" />
-          <span className="text-[11px] uppercase tracking-[0.32em] text-white/55 font-medium">
+          <span className="text-[11px] uppercase tracking-[0.32em] text-white font-medium">
             The Framework
           </span>
         </motion.div>
@@ -105,7 +105,7 @@ export default function Methodology() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="md:pt-3 md:border-l md:border-white/10 md:pl-8"
           >
-            <p className="text-[16px] md:text-[18px] text-white/55 leading-[1.55] max-w-md">
+            <p className="text-[16px] md:text-[18px] text-white leading-[1.55] max-w-md">
               A deterministic approach to systemic design, ensuring flawless
               execution from initial architecture to final deployment.
             </p>
@@ -156,10 +156,10 @@ export default function Methodology() {
 
               {/* Top row: icon + number */}
               <div className="relative flex items-start justify-between mb-12">
-                <div className="w-11 h-11 rounded-full border border-white/12 bg-white/[0.03] flex items-center justify-center text-white/85 group-hover:text-aura-gold group-hover:border-aura-gold/40 group-hover:bg-aura-gold/5 transition-all duration-500">
+                <div className="w-11 h-11 rounded-full border border-white/12 bg-white/[0.03] flex items-center justify-center text-white group-hover:text-white group-hover:border-aura-gold/40 group-hover:bg-aura-gold/5 transition-all duration-500">
                   {s.icon}
                 </div>
-                <div className="font-display font-semibold text-[26px] text-white/30 tabular-nums tracking-tight group-hover:text-white/60 transition-colors duration-500">
+                <div className="font-display font-semibold text-[26px] text-white tabular-nums tracking-tight group-hover:text-white transition-colors duration-500">
                   {s.no}
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function Methodology() {
               </h3>
 
               {/* Description */}
-              <p className="relative mt-4 text-[14px] text-white/55 leading-[1.6]">
+              <p className="relative mt-4 text-[14px] text-white leading-[1.6]">
                 {s.desc}
               </p>
 
@@ -185,7 +185,7 @@ export default function Methodology() {
                     className="h-full bg-gradient-to-r from-white/40 to-aura-gold/60"
                   />
                 </div>
-                <span className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white/60 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-500">
+                <span className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white group-hover:bg-white/10 group-hover:text-white group-hover:border-white transition-all duration-500">
                   <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
                     <path
                       d="M3 9L9 3M9 3H4.5M9 3v4.5"

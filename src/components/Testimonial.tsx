@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Testimonial() {
   return (
-    <section id="manifesto" className="relative py-40 px-6">
+    <section id="manifesto" className="relative pt-24 pb-0 px-6">
       <div className="max-w-[1200px] mx-auto text-center">
         {/* Big quote */}
         <motion.blockquote
@@ -12,7 +12,7 @@ export default function Testimonial() {
           transition={{ duration: 1.4, ease: [0.2, 0.7, 0.2, 1] }}
           className="font-display font-medium tracking-[-0.02em] leading-[1.18]"
           style={{
-            color: "#d8d2c2",
+            color: "#ffffff",
             fontSize: "clamp(32px, 4.5vw, 64px)",
           }}
         >
@@ -42,13 +42,13 @@ export default function Testimonial() {
           <div className="text-left">
             <div
               className="font-display font-semibold text-[15px] tracking-tight transition-colors duration-500 group-hover:text-white"
-              style={{ color: "#d8d2c2" }}
+              style={{ color: "#ffffff" }}
             >
               Elena Rostova
             </div>
             <div
               className="text-[12.5px] mt-0.5 transition-colors duration-500"
-              style={{ color: "#8a8678" }}
+              style={{ color: "#ffffff" }}
             >
               CTO, Nexus Enterprise
             </div>

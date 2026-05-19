@@ -1,23 +1,12 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const links = [
-  { label: "Home", target: "home" },
-  { label: "About", target: "architecture" },
-  { label: "Services", target: "systems" },
-  { label: "Portfolio", target: "works" },
+  { label: "Home", target: "/" },
+  { label: "About", target: "/about" },
+  { label: "Services", target: "/services" },
+  { label: "Portfolio", target: "/portfolio" },
 ];
-
-function scrollToId(id: string) {
-  if (id === "home") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
-  }
-  const el = document.getElementById(id);
-  if (el) {
-    const y = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  }
-}
 
 export default function Nav() {
   return (
@@ -29,47 +18,48 @@ export default function Nav() {
     >
       <div className="max-w-[1400px] mx-auto bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/8 rounded-full px-3 md:px-5 py-2.5 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
         {/* Logo */}
-        <button
-          onClick={() => scrollToId("home")}
+        <Link
+          to="/"
           className="flex items-center gap-3 pl-2 pr-4 group"
         >
-          <span className="relative w-7 h-7 rounded-full bg-white/95 flex items-center justify-center overflow-hidden">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-white to-white/60" />
-            <span className="absolute inset-1 rounded-full bg-[#0a0a0a] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <span className="relative w-7 h-7 rounded-[8px] bg-[#1a1a1a] border border-white/15 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-[#222]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
           </span>
           <span className="font-display font-bold tracking-[0.05em] text-[17px] md:text-[19px] text-white">
             AURA
           </span>
-        </button>
+        </Link>
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-1">
           {links.map((l) => (
-            <button
+            <Link
               key={l.label}
-              onClick={() => scrollToId(l.target)}
-              className="relative px-5 py-2 text-[14px] font-medium text-white/55 hover:text-white transition-colors group"
+              to={l.target}
+              className="relative px-5 py-2 text-[14px] font-medium text-white hover:text-white transition-colors group"
             >
               {l.label}
               <span className="absolute left-1/2 -translate-x-1/2 bottom-1 w-0 h-px bg-white/60 group-hover:w-4 transition-all duration-300" />
-            </button>
+            </Link>
           ))}
         </div>
 
         {/* Right cluster */}
         <div className="flex items-center gap-1.5">
-          <button
-            onClick={() => scrollToId("architecture")}
-            className="hidden sm:inline-flex px-4 md:px-5 py-2 text-[14px] font-medium text-white/70 hover:text-white transition-colors"
+          <Link
+            to="/login"
+            className="hidden sm:inline-flex px-4 md:px-5 py-2 text-[14px] font-medium text-white hover:text-white transition-colors"
           >
             Login
-          </button>
-          <button
-            onClick={() => scrollToId("cta")}
-            className="relative px-4 md:px-5 py-2 rounded-full text-[14px] font-medium text-white border border-white/15 bg-white/[0.03] hover:bg-white hover:text-black transition-all duration-300"
+          </Link>
+          <Link
+            to="/get-access"
+            className="relative px-4 md:px-5 py-2 rounded-full text-[14px] font-medium text-white border border-white/15 bg-white/[0.03] hover:bg-white/10 hover:text-white transition-all duration-300"
           >
             Get Access
-          </button>
+          </Link>
         </div>
       </div>
     </motion.nav>
