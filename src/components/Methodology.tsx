@@ -50,7 +50,7 @@ export default function Methodology() {
       {/* Architectural background */}
       <div className="absolute inset-0">
         <img
-          src="/images/methodology-bg.jpg"
+          src={`${(import.meta.env.VITE_PAGES_BASE ?? "/")}images/methodology-bg.jpg`}
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-50"
           style={{ filter: "brightness(0.55) contrast(1.1)" }}

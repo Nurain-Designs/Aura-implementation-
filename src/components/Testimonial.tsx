@@ -33,7 +33,7 @@ export default function Testimonial() {
         >
           <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/15 transition-all duration-500 group-hover:border-white/40 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
             <img
-              src="/images/elena.jpg"
+              src={`${(import.meta.env.VITE_PAGES_BASE ?? "/")}images/elena.jpg`}
               alt="Elena Rostova"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               style={{ filter: "grayscale(100%) contrast(1.05)" }}

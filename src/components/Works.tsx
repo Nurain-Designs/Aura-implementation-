@@ -6,14 +6,14 @@ const works = [
     no: "01",
     title: "Helios Grid",
     desc: "Sovereign compute · 47 regions",
-    image: "/images/infrastructure.jpg",
+    image: `${(import.meta.env.VITE_PAGES_BASE ?? "/")}images/infrastructure.jpg`,
   },
   {
     tag: "PLATFORM",
     no: "02",
     title: "Vega Console",
     desc: "Holographic dashboards · Real-time telemetry",
-    image: "/images/platform.jpg",
+    image: `${(import.meta.env.VITE_PAGES_BASE ?? "/")}images/platform.jpg`,
   },
 ];
 

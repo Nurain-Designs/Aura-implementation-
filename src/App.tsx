@@ -91,7 +91,7 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={(import.meta.env.VITE_PAGES_BASE ?? "/")}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

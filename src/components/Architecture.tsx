@@ -14,7 +14,7 @@ export default function Architecture() {
         >
           {/* Cryptographic image */}
           <img
-            src="/images/cryptographic.jpg"
+            src={`${(import.meta.env.VITE_PAGES_BASE ?? "/")}images/cryptographic.jpg`}
             alt="Cryptographic architecture"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
             style={{ filter: "contrast(1.05) brightness(0.95)" }}
